@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Target Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Target page</h1>
+
+        <p>
+            This page is running on a different origin.
+        </p>
+
+        <!--
+            This is the bit we're interested in.
+
+            In a real application this could represent some piece
+            of page state that an attacker shouldn't be able to
+            determine.
+        -->
+        <div id="secret-marker">
+            secret-state-present
+        </div>
+    </div>
+
+    <script>
+        console.log("Target origin:", location.origin);
+    </script>
+
+</body>
+</html>
