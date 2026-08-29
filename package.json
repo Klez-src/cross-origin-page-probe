@@ -1,0 +1,12 @@
+{
+  "name": "cross-origin-page-probe",
+  "version": "1.0.0",
+  "description": "A little POC for testing whether cross-origin page state can be inferred without reading the page.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
