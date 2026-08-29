@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cross-Origin Page Probe</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="header">
+            <span class="dot"></span>
+            <span>cross-origin-page-probe</span>
+        </div>
+
+        <h1>Can we tell what's on another page?</h1>
+
+        <p class="description">
+            This page cannot directly read the target because it is on
+            another origin. This is just a small experiment to see
+            whether browser behaviour gives us any information anyway.
+        </p>
+
+        <div class="controls">
+            <label for="target">Target</label>
+
+            <input
+                id="target"
+                value="http://localhost:3001/"
+                spellcheck="false"
+            >
+
+            <button id="run">
+                Run probe
+            </button>
+        </div>
+
+        <div class="result" id="result">
+            <span class="status-dot"></span>
+            <span>waiting for test...</span>
+        </div>
+
+        <div class="log" id="log"></div>
+    </main>
+
+    <script src="/app.js"></script>
+
+</body>
+</html>
